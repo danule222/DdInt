@@ -4,19 +4,17 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class ventanaLogin {
 
 	private JFrame frame;
+	private JLabel lblUsuario;
 	private JTextField textField;
+	private JLabel lblContrasenna;
 	private JTextField textField_1;
-	private JButton btnNewButton;
+	private JButton btnLogin;
 
 	/**
 	 * Launch the application.
@@ -46,47 +44,31 @@ public class ventanaLogin {
 	 */
 	private void initialize() {
 		frame = new JFrame("Inicio de sesión");
-		frame.setBounds(100, 100, 282, 194);
+		frame.setBounds(100, 100, 282, 158);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new FormLayout(new ColumnSpec[] {
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				FormSpecs.DEFAULT_COLSPEC,
-				FormSpecs.RELATED_GAP_COLSPEC,
-				ColumnSpec.decode("default:grow"),},
-			new RowSpec[] {
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,
-				FormSpecs.RELATED_GAP_ROWSPEC,
-				FormSpecs.DEFAULT_ROWSPEC,}));
+		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Usuario");
-		frame.getContentPane().add(lblNewLabel, "4, 4");
+		lblUsuario = new JLabel("Usuario");
+		lblUsuario.setBounds(10, 13, 95, 14);
+		frame.getContentPane().add(lblUsuario);
 		
 		textField = new JTextField();
-		frame.getContentPane().add(textField, "6, 4, 3, 1, left, default");
 		textField.setColumns(10);
+		textField.setBounds(91, 11, 165, 20);
+		frame.getContentPane().add(textField);
 		
-		JLabel lblNewLabel_1 = new JLabel("Contrase\u00F1a");
-		frame.getContentPane().add(lblNewLabel_1, "4, 6");
+		lblContrasenna = new JLabel("Contrase\u00F1a");
+		lblContrasenna.setBounds(10, 40, 95, 14);
+		frame.getContentPane().add(lblContrasenna);
 		
 		textField_1 = new JTextField();
-		frame.getContentPane().add(textField_1, "6, 6, 3, 1, left, default");
 		textField_1.setColumns(10);
+		textField_1.setBounds(91, 38, 165, 20);
+		frame.getContentPane().add(textField_1);
 		
-		btnNewButton = new JButton("Inicar sesi\u00F3n");
-		frame.getContentPane().add(btnNewButton, "4, 10");
+		btnLogin = new JButton("Inicar sesi\u00F3n");
+		btnLogin.setBounds(71, 85, 125, 23);
+		frame.getContentPane().add(btnLogin);
 	}
 
 }
